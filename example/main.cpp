@@ -8,25 +8,25 @@ void render() {}
 
 int main()
 {
-    hook* overlay = new Overlay(L"Fortnite-Win64-Shipping");
+    hook* hijack = new Overlay(L"Fortnite-Win64-Shipping");
 
-    if (!overlay->init())
+    if (!hijack->init())
         return 1;
-    if (!overlay->startup_d2d())
+    if (!hijack->startup_d2d())
         return 1;
 
     printf("hooked\n");
     for (auto start = std::chrono::steady_clock::now(), now = start; now < start + std::chrono::seconds {10}; now = std::chrono::steady_clock::now())
     {
-        overlay->begin_scene();
-              overlay->draw_text(10, 10, "github.com/dysprsm", D2D1::ColorF(D2D1::ColorF::Black));
-        overlay->clear_scene();
-        overlay->end_scene();
+        hijack->begin_scene();
+              hijack->draw_text(10, 10, "github.com/dysprsm", D2D1::ColorF(D2D1::ColorF::Black));
+        hijack->clear_scene();
+        hijack->end_scene();
     }
 
     printf("yo\n");
 
-    delete overlay;
+    delete hook;
 
     return 0;
 }
