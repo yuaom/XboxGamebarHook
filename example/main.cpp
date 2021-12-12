@@ -8,7 +8,7 @@ void render() {}
 
 int main()
 {
-    Overlay* overlay = new Overlay(L"Fortnite-Win64-Shipping", 18.0);
+    hook* overlay = new Overlay(L"Fortnite-Win64-Shipping");
 
     if (!overlay->init())
         return 1;
