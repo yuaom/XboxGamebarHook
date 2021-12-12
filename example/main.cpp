@@ -8,7 +8,7 @@ void render() {}
 
 int main()
 {
-    hook* hijack = new Overlay(L"Fortnite-Win64-Shipping");
+    hook* overlay = new hook::procces(L"Fortnite-Win64-Shipping");
 
     if (!hijack->init())
         return 1;
